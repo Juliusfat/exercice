@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <script>
+
+
+        var i=0;
+        varCoul= ['#1E7FCB','#AD360E','#F0C300','#568203','#DF73FF','#00FF00','#E1CE9A','#26619C','#AC1E44','#8F5922'];
+
+       varCoul.forEach(function(el){
+            var mon_div=document.createElement('div');
+
+
+            mon_div.style.backgroundColor = el;
+            mon_div.id = i;
+            document.body.appendChild(mon_div);
+            mon_div.addEventListener('click',function(){
+               mon_div.remove(this.selectedIndex);
+               document.body.appendChild(mon_div);
+           });
+            i++;
+        });
+
+
+
+    </script>
+
+</body>
+</html>

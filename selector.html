@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <h2></h2>
+    <div>
+        <p></p>
+    </div>
+
+    <div class="ma_class_1"></div>
+    <div class="ma_class_2"></div>
+    <div class="ma_class_3"></div>
+    <div class="ma_class_4"></div>
+    <div class="ma_class_5"></div>
+</table>
+
+<a href="//google.fr">google</a>
+<a href="//yahoo.fr">yahoo</a>
+
+<div class="ma_class">1</div>
+<div class="ma_class">2</div>
+
+<input type="text" name="nom"/>
+
+<header id="bandeau"></header>
+
+<script>
+
+    console.log(document.body);
+    console.log(document.head);
+
+    console.log(document.getElementsByName("nom"));
+    console.log(document.getElementById('bandeau'));
+    console.log(document.getElementsByTagName('a'));
+
+    console.log(document.getElementsByClassName('ma_class'));
+    console.log(document.querySelector('body>a'));
+    console.log(document.querySelectorAll('body>a+a'));
+
+
+
+    document.body.appendChild(a);
+
+    var p=document.createElement('p');; //white-space:pre;
+    p.style.whiteSpace='pre';
+    p.innerHTML='texte avec un <a href ="#">lien</a>';
+    document.body.appendChild(p);
+</script>
+
+</body>
+</html>

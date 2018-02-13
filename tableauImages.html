@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var var_9=[
+        'https://i.skyrock.net/7563/29207563/pics/962686796.jpg','https://i.skyrock.net/7563/29207563/pics/photo_29207563_2.png','https://i.skyrock.net/7563/29207563/pics/2613493092_1.jpg'
+
+
+    ];
+
+    for (let y=0 ; y<var_9.length;y++){
+
+        var img=document.createElement('img');; //white-space:pre;
+        img.src=var_9[y];
+
+        document.body.appendChild(img);
+
+    }
+
+    var_9.forEach(function(el){
+        var img=document.createElement('img');;
+        img.src=el;
+
+        document.body.appendChild(img);
+    });
+
+
+
+</script>
+
+
+</body>
+</html>

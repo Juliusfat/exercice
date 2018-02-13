@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+
+        var img=document.createElement('img');; //white-space:pre;
+        img.src='https://i.skyrock.net/7563/29207563/pics/962686796.jpg';
+        var img2=document.createElement('img');; //white-space:pre;
+        img2.src='https://i.skyrock.net/7563/29207563/pics/photo_29207563_2.png';
+
+
+
+        document.body.appendChild(img);
+        img.addEventListener('mouseenter', function () {
+            document.body.replaceChild(img2, img);
+        });
+        img2.addEventListener('mouseleave', function () {
+            document.body.replaceChild(img, img2);
+        });
+
+
+
+
+    </script>
+
+</body>
+</html>

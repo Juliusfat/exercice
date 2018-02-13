@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    div {
+    width: 100px;
+    height: 100px;
+    background-color: deepskyblue;
+    }
+
+    div.active {
+    background-color : yellow ;
+    }
+    </style>
+</head>
+<body>
+
+<script>
+
+
+    var mon_div_1= document.createElement("div" ) ;
+    mon_div_1.id='mon_div_1';
+    document.body.appendChild(mon_div_1);
+
+    document.body.appendChild(document.createElement("br"));
+    var mon_div_2= document.createElement("div" ) ;
+    mon_div_2.id='mon_div_2';
+    document.body.appendChild(mon_div_2);
+
+
+    mon_div_1.addEventListener('click', function () {
+        mon_div_2.classList.toggle('active')
+    })
+
+    mon_div_2.addEventListener('click', function () {
+        mon_div_1.classList.toggle('active')
+    })
+
+
+</script>
+
+</body>
+</html>

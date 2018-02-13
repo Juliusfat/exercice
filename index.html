@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var var_1 = "string";
+    var var_2 = 2.5;
+    var var_3 = -.5;
+    var var_4 = 'string';
+    var var_5 = true // false;
+    var var_6 = null;
+    var var_7 = var_1 + var_4;
+
+    var var_8 = [0, true, 'ok', 5, [10]];
+
+    console.log(var_8.length,var_8[4], var_8[4][0]);
+
+    var_9=[
+        ['x1_y1','x2_y1','x3_y1','x4_y1','x5_y1'],
+        ['x1_y2','x2_y2','x3_y2','x4_y2','x5_y2'],
+        ['x1_y3','x2_y3','x3_y3','x4_y3','x5_y3'],
+
+    ];
+
+    console.log(var_9[2][3]); // (y-1) (x+1)
+
+    for (let y=0 ; y<var_9.length;y++){
+        for(let x=0;x<var_9[y].length;x++){
+            console.log(x,y,var_9[y][x]);
+        }
+
+    }
+
+    for (var o of var_9) {
+
+        console.log(o);
+    }
+
+    const error=1;
+
+    //console.log('attention', x,y);
+
+    var_9.forEach(function (el,n,ar) {
+        el.forEach(function(el2,n2,ar){
+            console.log('el2=>',el2,'n2=>',n2,'ar=>',ar)
+        });
+    });
+
+    var_10=10;
+
+    while(var_10>5) {
+        console.log(var_10);
+        var_10--;
+    }
+
+    var obj={
+        nom:'david',
+        son_prenom:'dupont',
+        'son-age':27
+    }
+
+    console.log(obj.nom,obj.son_prenom,obj['son-age']);
+
+    for(var i in obj) {
+        console.log(i,obj[i]);
+    }
+
+
+    function func_1(p1,p2,p3) {
+        return p1+p2*p3;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+        }
+
+        div.active {
+            outline: 2px solid yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="mon_div"></div>
+<script>
+    var mon_div = document.getElementById("mon_div")
+    mon_div.addEventListener('click', function () {
+        console.log('click', this);
+        // if(this.classList.contains('active')){
+        //     this.classList.remove('active')
+        // }else{
+        //     this.classList.add('active')
+        // }
+        this.classList.toggle
+    });
+
+    mon_div.addEventListener('mouseover', function () {
+        console.log('mouseover', this);
+    });
+    mon_div.addEventListener('mouseout', function () {
+        console.log('mouseout', this);
+    });
+    mon_div.addEventListener('dblclick', function () {
+        console.log('dblclick', this);
+    });
+    mon_div.addEventListener('mousemove', function () {
+        console.log('mousemove', this);
+    });
+
+    mon_div.addEventListener('mouseenter', function () {
+        console.log('mouseenter', this);
+    });
+    mon_div.addEventListener('mouseleave', function () {
+        console.log('mouseleave', this);
+    });
+
+
+    mon_div.addEventListener('mousedown', function () {
+        console.log('mousedown', this);
+    });
+    mon_div.addEventListener('mouseup', function () {
+        console.log('mouseup', this);
+    });
+
+</script>
+</body>
+</html>
