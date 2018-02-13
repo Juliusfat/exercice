@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+
+            position: absolute;
+            transition-duration: 2s;
+            width: 250px;
+            height : 100%;
+            background-color: yellow;
+
+        }
+
+        button {
+
+            position: relative;
+            transition-duration: 2s;
+            width: 20px;
+            height: 20px;
+            background-color: deepskyblue;
+            text-align: center;
+            left:251px;
+        }
+
+        .move {
+            transition-duration: 2s;
+            left: 0px;
+            width: 0px;
+
+
+
+        }
+    </style>
+
+</head>
+<body>
+
+<script>
+
+    var mon_div = document.createElement('div');
+        document.body.appendChild(mon_div);
+
+    var button = document.createElement('button')
+        button.innerText='X';
+        document.body.appendChild(button);
+
+    button.addEventListener('click', function () {
+
+        mon_div.classList.toggle('move');
+        button.classList.toggle('move')
+    });
+</script>
+
+</body>
+</html>

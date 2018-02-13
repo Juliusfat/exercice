@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var ar = [
+        {title : 'titre1',content : 'voici le premier article'},
+        {title : 'titre2',content : 'voici le deuxième article'},
+        {title : 'titre3',content : 'voici le troisième article'},
+    ];
+    ar.forEach(function (el) {
+        var titre=document.createElement('h2');
+        titre.innerText = el.title;
+        document.body.appendChild(titre);
+        var para=document.createElement('p');
+        para.innerText = el.content;
+        document.body.appendChild(para);
+
+    })
+
+</script>
+
+</body>
+</html>
