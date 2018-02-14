@@ -4,55 +4,74 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        div {
 
+        html,body{
+            height:100%;
+        }
+
+        body{
+            margin:auto;
+        }
+
+        body>nav{
+            position: fixed;
+            left:-250px;
+            width:250px;
+            background-color: greenyellow;
+            height:100%;
+            /*height:100vh;*/
+            transition: left .4s ease;
+            /*linear ease-in ease-out ease-in-out ease */
+        }
+
+        body>nav{
+
+        }
+
+        body.nav_open>nav{
+            left:0;
+        }
+
+        body >nav >button{
             position: absolute;
-            transition-duration: 2s;
-            width: 250px;
-            height : 100%;
-            background-color: yellow;
-
+            right:-50px;
+            background:rgba(255,2555,255,.5);
+            width:50px;
+            height:50px;
+            border:none;
+            transition: all .4s ease;
         }
 
-        button {
-
-            position: relative;
-            transition-duration: 2s;
-            width: 20px;
-            height: 20px;
-            background-color: deepskyblue;
-            text-align: center;
-            left:251px;
+        body >nav >button:hover{
+            background:#FFF;
         }
 
-        .move {
-            transition-duration: 2s;
-            left: 0px;
-            width: 0px;
-
-
-
+        body >nav >button::before{
+            content:'x';
         }
+
+        body>article {
+            background: orangered;
+            padding-left: 30px;
+            min-height: 100%;
+            padding-top: 50px;
+            transition: padding-left .4s ease 2s;
+        }
+
+        body.nav_open > article {
+            padding-left: cacl(250px +30px);
+        }
+
     </style>
-
 </head>
 <body>
-
+<nav id="nav_main"><button id="btn_nav_close"></button></nav>
 <script>
-
-    var mon_div = document.createElement('div');
-        document.body.appendChild(mon_div);
-
-    var button = document.createElement('button')
-        button.innerText='X';
-        document.body.appendChild(button);
-
-    button.addEventListener('click', function () {
-
-        mon_div.classList.toggle('move');
-        button.classList.toggle('move')
+    var btn_nav_close = document.getElementById('btn_nav_close');
+    btn_nav_close.addEventListener('click', function(){
+        document.body.classList.toggle('nav_open');
     });
 </script>
-
+<article></article>
 </body>
 </html>

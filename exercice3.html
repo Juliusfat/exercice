@@ -14,14 +14,20 @@
     mon_pi.innerText ='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda consectetur expedita illum impedit laudantium modi nam nemo neque nisi non officiis pariatur qui reprehenderit sit, soluta tempora? Aspernatur, sapiente.';
     document.body.appendChild(mon_pi);
 
-    for (i=0 ; i<5 ; i++) {
+    for (var i=0 ; i<5 ; i++) {
         var mon_p = document.createElement('p');
 
         mon_p.innerText ='paragraphe';
         document.body.appendChild(mon_p);
         mon_p.addEventListener('click',function(){
-            this.innerText = mon_pi.innerText;
+            if (this.innerText==='paragraphe') {
+                this.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda consectetur expedita illum impedit laudantium modi nam nemo neque nisi non officiis pariatur qui reprehenderit sit, soluta tempora? Aspernatur, sapiente.';
+            }else{
+                this.innerText = 'paragraphe';
+            }
         });
+
+        //mon_p.innerText = (i === 0 ? mon_pi : mon_p);
     }
 
 </script>
