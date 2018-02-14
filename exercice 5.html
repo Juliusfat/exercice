@@ -13,7 +13,38 @@
         {title : 'titre2',content : 'voici le deuxième article'},
         {title : 'titre3',content : 'voici le troisième article'},
     ];
+
+    function create_article(title, content){
+        var ar=document.createElement('article');
+        var h2=document.createElement('h2');
+        h2.innerHTML=title;
+        ar.appendChild(h2);
+        var p=document.createElement('p');
+        p.innerHTML=content;
+        ar.appendChild(p);
+
+        //ar.innerHTML = '<h2>' + title + '</h2>' + '<p>' + content + '</p>';
+        document.body.appendChild(ar);
+    }
+
     ar.forEach(function (el) {
+        create_article(el.title, el.content);
+    });
+
+    var counter=0;
+
+    var set_int = setInterval(function () {
+        if(counter<3) {
+            ar.forEach(function (el) {
+                create_article(el.title, el.content);
+            });
+            counter++;
+        }else{
+            clearInterval(set_int);
+        }
+    },2000);
+
+    /*ar.forEach(function (el) {
         var titre=document.createElement('h2');
         titre.innerText = el.title;
         document.body.appendChild(titre);
@@ -21,7 +52,7 @@
         para.innerText = el.content;
         document.body.appendChild(para);
 
-    })
+    })*/
 
 </script>
 
