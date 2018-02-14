@@ -8,20 +8,27 @@
 
     <script>
 
-        var img=document.createElement('img');; //white-space:pre;
+
+        var img=document.createElement('img');; //white-space:pre; //var img=new Image();
         img.src='https://i.skyrock.net/7563/29207563/pics/962686796.jpg';
-        var img2=document.createElement('img');; //white-space:pre;
-        img2.src='https://i.skyrock.net/7563/29207563/pics/photo_29207563_2.png';
+        img.addEventListener('load',function(){
+           // alert('image téléchargée');
+            document.body.appendChild(this);
+        }
+        );
 
 
-
-        document.body.appendChild(img);
-        img.addEventListener('mouseenter', function () {
-            document.body.replaceChild(img2, img);
+        img.addEventListener('mouseover', function () {
+            this.src='https://i.skyrock.net/7563/29207563/pics/photo_29207563_2.png';
         });
-        img2.addEventListener('mouseleave', function () {
-            document.body.replaceChild(img, img2);
+
+        img.addEventListener('mouseout', function () {
+            this.src='https://i.skyrock.net/7563/29207563/pics/962686796.jpg';
         });
+        img.addEventListener('click', function () {
+            this.parentNode.removeChild(this); //this.remove();
+        });
+
 
 
 
