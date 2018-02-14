@@ -46,32 +46,57 @@
             background:#FFF;
         }
 
-        body >nav >button::before{
-            content:'x';
+        body >nav >button::before,
+        body >nav >button::after{
+            content:'';
+            display: block;
+            position: absolute;
+            left: 10px;
+            height: 2px;
+            width: 30px;
+            background-color: #000;
+            transition: all .4s ease;
         }
+
+        body >nav >button::before{
+            top: 10px;
+            box-shadow: 0 14px 0 0;
+        }
+
+        body >nav >button::after{
+            bottom: 10px;
+        }
+        body >nav >button:hover::before {
+            box-shadow: 0 14px 0 0 transparent;
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+        body >nav >button:hover::after {
+            transform: rotate(-45deg) translate(10px, -10px);
+        }
+
 
         body>article {
             background: orangered;
             padding-left: 30px;
             min-height: 100%;
             padding-top: 50px;
-            transition: padding-left .4s ease 2s;
+            transition: all .4s ease;
         }
 
         body.nav_open > article {
-            padding-left: cacl(250px +30px);
+            padding-left: calc(250px + 30px);
         }
 
     </style>
 </head>
 <body>
-<nav id="nav_main"><button id="btn_nav_close"></button></nav>
+<nav id="nav_main"><button id="_btn_nav_close"></button></nav>
 <script>
-    var btn_nav_close = document.getElementById('btn_nav_close');
-    btn_nav_close.addEventListener('click', function(){
+
+    _btn_nav_close.addEventListener('click', function(){
         document.body.classList.toggle('nav_open');
     });
 </script>
-<article></article>
+<article>test</article>
 </body>
 </html>
