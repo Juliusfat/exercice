@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src = "http://ekladata.com/vNKw8GSt1oxYFnJwETBWNJn3e8U.jpg"
+     data-src="http://molex.unblog.fr/files/2009/02/perdu.png"
+     data-original_src="http://ekladata.com/vNKw8GSt1oxYFnJwETBWNJn3e8U.jpg"/>
+<img src = "http://ekladata.com/vNKw8GSt1oxYFnJwETBWNJn3e8U.jpg"
+     data-src="https://pbs.twimg.com/profile_images/482806202/PF_400x400.jpg"
+     data-original_src="http://ekladata.com/vNKw8GSt1oxYFnJwETBWNJn3e8U.jpg"/>
+<img src = "http://ekladata.com/vNKw8GSt1oxYFnJwETBWNJn3e8U.jpg"
+     data-src="http://molex.unblog.fr/files/2009/02/perdu.png"
+     data-original_src="http://ekladata.com/vNKw8GSt1oxYFnJwETBWNJn3e8U.jpg"/>
+
+
+    <script>
+
+        var imgs = document.getElementsByTagName('img');
+
+        for(var i=0 ; i<imgs.length;i++) {
+            imgs[i].addEventListener('mouseover',function(){
+                this.src=this.dataset.src;
+            });
+            imgs[i].addEventListener('mouseout',function() {
+                this.src = this.dataset.original_src;
+            });
+            imgs[i].dataset.new_source='image2.jpg';
+            imgs[i].removeAttribute('data-new_source');
+        };
+    </script>
+</body>
+</html>

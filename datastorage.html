@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="_h1_number"></h1>
+<button id="_btn_add">+</button>
+<script>
+    /*global _btn_add, _h1_number*/
+
+    var counter=0;
+
+
+    if(localStorage && !!localStorage.counter){
+        counter=parseInt(localStorage.counter);
+        //parseFloat();
+    }
+    _h1_number.textContent=counter;
+
+
+    _btn_add.addEventListener('click',function(){
+        _h1_number.textContent=++counter;
+        localStorage.counter = counter;
+    });
+
+    //localStorage.clear();
+    //delete localStorage.counter;
+    //sessionStorage durée de vie la fenêtre
+</script>
+</body>
+</html>

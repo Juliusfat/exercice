@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+        <input type="text" id="_input_text_1" placeholder="nom"/>
+        <input type="text" id="_input_text_2" placeholder="prénom"/>
+        <output id="_output"></output>
+        <script>
+            _input_text_1.addEventListener('keyup',function(){
+                console.log(this.value);
+                _output.value='bonjour ' + _input_text_2.value + ' ' + this.value;
+            });
+            _input_text_2.addEventListener('keyup',function(){
+                console.log(this.value);
+                _output.value='bonjour ' + this.value + ' ' + _input_text_1.value;
+            });
+
+            document.body.addEventListener('keyup', function(e) {
+                //console.log(e)
+                if(e.shiftKey) {
+                    console.log('touche shift enfoncée');
+                }
+                if(e.ctrlKey){
+                    console.log('touche shift enfoncée');
+                }
+                if(e.altKey){
+                    console.log('touche shift enfoncée');
+                }
+                console.log(e.keyCode,String.fromCharCode(e.keyCode));
+
+            });
+
+            // keydown keypress
+        </script>
+    </body>
+</html>

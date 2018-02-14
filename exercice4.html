@@ -91,12 +91,43 @@
 </head>
 <body>
 <nav id="nav_main"><button id="_btn_nav_close"></button></nav>
+    <article><textarea name="" id="" cols="10" rows="1"></textarea></article>
+
+
 <script>
 
     _btn_nav_close.addEventListener('click', function(){
         document.body.classList.toggle('nav_open');
     });
+
+
+    document.body.addEventListener('keyup',open_menu);
+
+    var fields = document.querySelectorAll('input[type="text"],textarea');
+
+    for (var i = 0; i < fields.length; i++){
+        fields[i].addEventListener('focus',function() {
+            document.body.removeEventListener('keyup', open_menu)
+            console.log('removeEventListener')
+        });
+        fields[i].addEventListener('blur',function() {
+            document.body.addEventListener('keyup', open_menu)
+        });
+    }
+    function open_menu(e)
+    {
+        switch (e.keyCode) {
+            case 37:
+                document.body.classList.remove('nav_open');
+                break;
+            case 39:
+                document.body.classList.add('nav_open');
+                break;
+        }
+    }
+
+
 </script>
-<article>test</article>
+
 </body>
 </html>

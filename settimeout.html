@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="_btn_sto">X</button>
+<script>
+    _btn_sto.addEventListener('click', function(){
+        setTimeout(function () {
+            if (confirm ('voulez-vous une fenêtre d\'alerte')){
+                alert('set timeout');
+            }
+
+        },2000); // clearTimeout();
+    });
+
+</script>
+</body>
+</html>

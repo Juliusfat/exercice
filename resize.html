@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{min-height: 2500px;
+            margin: auto}
+
+    </style>
+</head>
+<body>
+
+<script>
+    window.addEventListener('resize',function(){
+        console.log('resize',this.innerWidth,this.innerHeight
+        ,this.outerWidth,this.outerHeight);
+    });
+
+    var bottom_margin=200;
+    var end_display=false;
+
+    window.addEventListener('scroll',function () {
+        //console.log('scroll',this.scrollY,
+        //    document.body.getBoundingClientRect());
+        //console.log(this.scrollY,window.innerHeight,
+        //    document.body.getBoundingClientRect().height);
+        if(document.body.getBoundingClientRect().height<this.scrollY + window.innerHeight
+            + bottom_margin){
+            if (!end_display){
+            console.log('fin de page');
+            end_display =true;
+        } else{
+            end_display=false;
+        }
+
+    }});
+
+
+
+</script>
+
+</body>
+</html>
