@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="js/jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <h1>jQuery the best..pas tout à fait vrai</h1>
+
+        <nav>
+
+            <a href="horloge.html">horloge analogique</a>
+            <a href="HorlogeDigitale.html">horloge digital</a>
+            <a href="ListeDeJournaux.html">journaux</a>
+
+        </nav>
+        <ul>
+            <li>liste
+            <ul>
+            <li>Cours</li>
+            <li>Exercice</li>
+            </ul>
+            </li>
+        </ul>
+        <nav>
+        <div>
+            <button id ="ajout" type="submit">+</button>
+            <button id ="valider" type="submit">valider</button>
+            <input type="text" name="cherche">
+
+        </div>
+        </nav>
+        <script>
+
+            $("h1").click(function () {
+                $(this).html('je change comme je veux');
+            });
+            $('a').click(function () {
+                $(this).siblings('a').css('color','red');
+            });
+
+            $('li').click(function () {
+                $(this).children('ul').children('li').slideToggle();
+
+            });
+            $('#ajout').click(function(){
+                $('div').append('<input type="text">');
+            });
+            $('#valider').click(function(){
+                var v =$("cherche").val();
+                $('div').append('<p>'+v+'</p>');
+            });
+
+
+
+        </script>
+
+    </body>
+</html>
